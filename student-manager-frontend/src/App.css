@@ -1,0 +1,181 @@
+/* Container styling */
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Error messages */
+p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+}
+
+p[style] {
+  color: red;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Search input */
+input[placeholder="Search by name"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Student table */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.student-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.student-table tr.editing {
+  background-color: #e3f2fd;
+  border-left: 4px solid #007bff;
+}
+
+/* Edit/Delete buttons */
+.student-table button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.student-table button:last-child {
+  background-color: #dc3545;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .App {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[placeholder="Search by name"],
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .student-table,
+  .student-table thead,
+  .student-table tbody,
+  .student-table th,
+  .student-table td,
+  .student-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .student-table thead {
+    display: none;
+  }
+
+  .student-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .student-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .student-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+  }
+
+  .student-table td:last-child {
+    border-bottom: none;
+  }
+
+  .student-table button {
+    width: 48%;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+}
